@@ -10,7 +10,8 @@
 
     <header>
         <h1>Meu Site</h1>
-        <menu>
+        <div onclick="clickMenu()"><img id="burguer" src="imagem/hamburger.png"  alt=""></div>
+        <menu id="itens">
             <ul>
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
@@ -23,13 +24,22 @@
     <main>
         <article>
             <h2>Testando Media Queries</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptas molestias earum, ex consequuntur eos. Sunt voluptates, eligendi quo repellendus perspiciatis officia quod odio cumque et corporis excepturi sit sapiente. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus dolore accusantium reprehenderit cum et incidunt deserunt possimus omnis assumenda, quia voluptatum dolorem non doloremque nostrum sequi! Minus, fugit nisi.</p>
+            <p>Media queries são uma parte importante de uma técnica ainda mais importante: Design Responsivo. Quer se aprofundar na Web mobile e responsivo? Confira os cursos da <a href="https://www.alura.com.br/curso-online-html-css-responsividade-mobile-first">Alura</a> e da <a href="https://www.alura.com.br/formacao-html-css">Caelum</a>.No <a href="https://www.alura.com.br/artigos/pixels-pixels-ou-pixels-dicas-de-web-mobile-com-viewport">artigo sobre viewport</a>, aqui do Blog, vimos como criar uma página com tamanho adequado aos diversos dispositivos que temos que lidar hoje em dia.</p>
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi aliquid sint iure beatae praesentium neque nemo omnis repellat consequatur aperiam nulla, laudantium sequi. Quisquam veritatis maiores animi quis aspernatur nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta sit quos nisi, unde adipisci consectetur magnam minima laudantium reiciendis reprehenderit delectus cum, excepturi eaque eos amet nulla doloremque incidunt quaerat?</p>
+            <p>Se colocarmos um viewport com width=320, por exemplo, conseguimos criar uma página para iPhone e outros smartphones normalmente. Mas e se a página for aberta num iPad de 768px de resolução? Ou em um tablet Android de 600px de largura? Ou um smartphone Android de 533px em modo paisagem?Criar sites específicos para cada tamanho de tela não é a melhor solução.</p>
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime inventore mollitia delectus, blanditiis illum placeat laudantium quo dolorem illo quam provident excepturi deleniti ipsam hic tenetur labore at nobis. Nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora voluptas aliquid suscipit quos, quisquam a, numquam esse magnam odio ab. Tempora nobis iusto illum. Perspiciatis saepe officiis dignissimos vel!</p>
+            <p>Podemos então colocar o viewport com width=device-width e codificar nosso HTML e CSS para usarem 100% da largura, flexibilizando nosso layout. Mas será que nosso layout vai ficar bonito tanto em um smartphone de 240px quanto num tablet com 1024px?No último site mobile que fizemos, o do livro Arquitetura Java, usar um layout flexível deixava a página muito usável em telas pequenas (como num Nokia de 240px) mas não em telas maiores (como em um iPad):</p>
         </article>
     </main>
     
+    <script>
+        function clickMenu(){
+            if(itens.style.display == "block"){
+                itens.style.display = "none"
+            }else{
+                itens.style.display = "block"
+            }
+        }
+    </script>
 </body>
 </html>
